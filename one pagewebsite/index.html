@@ -1,0 +1,756 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!--
+	This file is part of a site template for sale at ThemeForest.net.
+	See: http://themeforest.net/user/GeertDD/portfolio
+	Copyright ©2009 Geert De Deckere <geert@idoe.be>
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Pink Diamond Admin · Live Preview</title>
+	<link rel="stylesheet" type="text/css" href="css/master.css" />
+	<link rel="shortcut icon" href="./img/layout/favicon.png" />
+	<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="./ie/css/ie6.css" /><![endif]-->
+	<!--[if IE 7]><link rel="stylesheet" type="text/css" href="./ie/css/ie7.css" /><![endif]-->
+	<script type="text/javascript" src="js/jquery-1.3.min.js"></script>
+	<script type="text/javascript" src="js/my-jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// You can delete the code block below. Its purpose is just to show the right
+			// content section for the live preview.
+			$('#content > div').hide().filter('#content-welcome').show();
+			$('#nav > .subnav.features a').click(function() {
+				$('#content > div').hide().filter('#' + $(this)[0].href.replace(/^.*#/, '')).show();
+				return false;
+			});
+			// Also the small form buttons above the textfield shouldn't do anything in the demo
+			$('button.small').click(function() {
+				return false;
+			});
+		});
+	</script>
+
+</head>
+<body>
+
+	<p id="header">
+		<a href="#">Pink Diamond Admin</a>
+	</p><!-- #header -->
+
+	<p id="user">
+		Logged in as <strong>username</strong> · <a href="./login.html">Logout</a>
+	</p><!-- #user -->
+
+	<p class="skip"><a href="#content">Skip navigation</a></p>
+
+	<div id="nav">
+		<ul id="mainnav">
+			<li id="features" class="active"><a href="#content-welcome">Features</a></li>
+			<li id="dashboard"><a href="#">Dashboard</a></li>
+			<li id="modules"><a href="#">Modules</a></li>
+			<li id="pages"><a href="#">Pages</a></li>
+			<li id="settings"><a href="#">Settings</a></li>
+			<li id="my-profile" class="right"><a href="#">My Profile</a></li>
+		</ul><!-- #mainnav -->
+		<ul class="subnav features">
+			<li class="active"><a href="#content-welcome">Welcome</a></li>
+			<li><a href="#content-forms">Forms</a></li>
+			<li><a href="#content-tables">Tables</a></li>
+			<li><a href="#content-pagination">Pagination</a></li>
+			<li><a href="#content-messages">Messages</a></li>
+			<li><a href="#content-boxes">Boxes</a></li>
+			<li><a href="#content-text">Text</a></li>
+		</ul>
+		<ul class="subnav dashboard">
+			<li><a href="#">Welcome</a></li>
+			<li><a href="#">Quick Stats</a></li>
+			<li><a href="#">Quick Search</a></li>
+			<li><a href="#">Notes</a></li>
+		</ul>
+		<ul class="subnav modules">
+			<li><a href="#">New Module</a></li>
+			<li><a href="#">Edit</a></li>
+			<li><a href="#">Media Library</a></li>
+			<li><a href="#">Spam Filter</a></li>
+			<li><a href="#">Blogroll</a></li>
+			<li><a href="#">Comments</a></li>
+			<li><a href="#">Export Tools</a></li>
+		</ul>
+		<ul class="subnav pages">
+			<li><a href="#">New Page</a></li>
+			<li><a href="#">Edit</a></li>
+			<li><a href="#">Categories</a></li>
+			<li><a href="#">Tags</a></li>
+			<li><a href="#">SEO Settings</a></li>
+			<li><a href="#">Sitemap</a></li>
+		</ul>
+		<ul class="subnav settings">
+			<li><a href="#">General</a></li>
+			<li><a href="#">Reading</a></li>
+			<li><a href="#">Writing</a></li>
+			<li><a href="#">Modules</a></li>
+			<li><a href="#">Permissions</a></li>
+			<li><a href="#">Back-up</a></li>
+			<li><a href="#">Advanced</a></li>
+		</ul>
+		<ul class="subnav my-profile">
+			<li><a href="#">Personal Information</a></li>
+			<li><a href="#">Password</a></li>
+			<li><a href="#">E-mail</a></li>
+			<li><a href="#">Signature</a></li>
+			<li><a href="#">Avatar</a></li>
+			<li><a href="#">Other Settings</a></li>
+		</ul>
+	</div><!-- #nav -->
+
+	<div id="content">
+		<div id="content-welcome">
+			<div class="span-2 first">
+				<p>
+					Hey, nice to see you're checking out this template.
+					Use the “Features” navigation above to explore it a bit more in depth.
+					It is all <strong>valid XHTML&nbsp;1.0 Strict</strong> and CSS, combined with a touch of <a href="#1a">jQuery</a>.
+					Enjoy!
+				</p>
+				<p class="span-1 first">
+					One of the features you will probably like most is the built-in <strong>CSS grid</strong> system.
+					It allows you to lay out your content over <a href="#1b">six columns</a>.
+					And it really is all quite easy!
+				</p>
+				<p class="span-1">
+					The tabbed box at the right allows you to instantly switch between three tables.
+					Could be put to good use on your admin dashboard for example.
+				</p>
+			</div>
+			<div class="span-4">
+				<div class="tabs">
+					<div class="head">
+						<ul>
+							<li><a href="#table-comments">Comments</a></li>
+							<li><a href="#table-visitors">Visitors</a></li>
+							<li><a href="#table-search">Search Terms</a></li>
+						</ul>
+					</div>
+					<div id="table-comments" class="body no-padding">
+						<table summary="Latest comments">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th style="width:40%">Excerpt</th>
+									<th>Date</th>
+									<th class="center">Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>John Doe</td>
+									<td>Great article! I would like to add that dolor ipsum sit amet dolore…</td>
+									<td>12 minutes ago</td>
+									<td class="center">
+										<a href="#"><img alt="view" title="View" src="./img/layout/fugue-icons/balloon__arrow.png" width="16" height="16" /></a>
+										<a href="#"><img alt="approve" title="Approve" src="./img/layout/fugue-icons/tick_circle.png" width="16" height="16" /></a>
+										<a href="#"><img alt="delete" title="Delete" src="./img/layout/fugue-icons/slash.png" width="16" height="16" /></a>
+									</td>
+								</tr>
+								<tr>
+									<td>J. The Plumber</td>
+									<td>Lorem dolor ipsum sit amet, constetur eiusmod tempor incididunt ut labo…</td>
+									<td>4 hours ago</td>
+									<td class="center">
+										<a href="#"><img alt="view" title="View" src="./img/layout/fugue-icons/balloon__arrow.png" width="16" height="16" /></a>
+										<a href="#"><img alt="approve" title="Approve" src="./img/layout/fugue-icons/tick_circle.png" width="16" height="16" /></a>
+										<a href="#"><img alt="delete" title="Delete" src="./img/layout/fugue-icons/slash.png" width="16" height="16" /></a>
+									</td>
+								</tr>
+								<tr>
+									<td>Joe Bloggs</td>
+									<td>Hey, nice to see you're checking out consectetur adipisicing elit…</td>
+									<td>10 hours ago</td>
+									<td class="center">
+										<a href="#"><img alt="view" title="View" src="./img/layout/fugue-icons/balloon__arrow.png" width="16" height="16" /></a>
+										<a href="#"><img alt="approve" title="Approve" src="./img/layout/fugue-icons/tick_circle.png" width="16" height="16" /></a>
+										<a href="#"><img alt="delete" title="Delete" src="./img/layout/fugue-icons/slash.png" width="16" height="16" /></a>
+									</td>
+								</tr>
+								<tr>
+									<td>SwissWatches</td>
+									<td>Pricey Watches 80% OFF PRICE: mRolex, Panerai, Louis Vuiton,…</td>
+									<td>3 days ago</td>
+									<td class="center">
+										<a href="#"><img alt="view" title="View" src="./img/layout/fugue-icons/balloon__arrow.png" width="16" height="16" /></a>
+										<a href="#"><img alt="approve" title="Approve" src="./img/layout/fugue-icons/tick_circle.png" width="16" height="16" /></a>
+										<a href="#"><img alt="delete" title="Delete" src="./img/layout/fugue-icons/slash.png" width="16" height="16" /></a>
+									</td>
+								</tr>
+								<tr>
+									<td>Jon Jones</td>
+									<td>Certain fixed expressions are used as quis nostrud exercitation ullamco…</td>
+									<td>1 week ago</td>
+									<td class="center">
+										<a href="#"><img alt="view" title="View" src="./img/layout/fugue-icons/balloon__arrow.png" width="16" height="16" /></a>
+										<a href="#"><img alt="approve" title="Approve" src="./img/layout/fugue-icons/tick_circle.png" width="16" height="16" /></a>
+										<a href="#"><img alt="delete" title="Delete" src="./img/layout/fugue-icons/slash.png" width="16" height="16" /></a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div><!-- #table-comments -->
+					<div id="table-visitors" class="body no-padding">
+						<table summary="Visitor statistics for the past week">
+							<thead>
+								<tr>
+									<th>Date</th>
+									<th class="center" style="width:18%">Visits</th>
+									<th class="center" style="width:18%">Unique</th>
+									<th class="center" style="width:18%">Pageviews</th>
+									<th class="center" style="width:18%">New Visits</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><a href="#">January 22nd, 2009</a></td>
+									<td class="center">684</td>
+									<td class="center">596</td>
+									<td class="center">3215</td>
+									<td class="center">72.6%</td>
+								</tr>
+								<tr>
+									<td><a href="#">January 21st, 2009</a></td>
+									<td class="center">854</td>
+									<td class="center">756</td>
+									<td class="center">4587</td>
+									<td class="center">75.9%</td>
+								</tr>
+								<tr>
+									<td><a href="#">January 20th, 2009</a></td>
+									<td class="center">1047</td>
+									<td class="center">894</td>
+									<td class="center">6845</td>
+									<td class="center">82.0%</td>
+								</tr>
+								<tr>
+									<td><a href="#">January 19th, 2009</a></td>
+									<td class="center">1685</td>
+									<td class="center">1402</td>
+									<td class="center">7112</td>
+									<td class="center">80.1%</td>
+								</tr>
+								<tr>
+									<td><a href="#">January 18th, 2009</a></td>
+									<td class="center">658</td>
+									<td class="center">459</td>
+									<td class="center">2698</td>
+									<td class="center">68.5%</td>
+								</tr>
+								<tr>
+									<td><a href="#">January 17th, 2009</a></td>
+									<td class="center">784</td>
+									<td class="center">590</td>
+									<td class="center">3654</td>
+									<td class="center">72.3%</td>
+								</tr>
+								<tr>
+									<td><a href="#">January 16th, 2009</a></td>
+									<td class="center">1203</td>
+									<td class="center">1015</td>
+									<td class="center">4506</td>
+									<td class="center">85.7%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div><!-- #table-visitors -->
+					<div id="table-search" class="body no-padding">
+						<table summary="Search words used to find the site">
+							<thead>
+								<tr>
+									<th>Keyword</th>
+									<th class="center" style="width:20%">Visits</th>
+									<th class="center" style="width:20%">Pages/Visit</th>
+									<th class="center" style="width:20%">Google Rank</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>themeforest <a href="#"><img alt="more info" title="More info" src="./img/layout/fugue-icons/magnifier_medium_left.png" width="16" height="16" /></a></td>
+									<td class="center">596</td>
+									<td class="center">3.10</td>
+									<td class="center">#26</td>
+								</tr>
+								<tr>
+									<td>valid html template <a href="#"><img alt="more info" title="More info" src="./img/layout/fugue-icons/magnifier_medium_left.png" width="16" height="16" /></a></td>
+									<td class="center">588</td>
+									<td class="center">5.95</td>
+									<td class="center">#8</td>
+								</tr>
+								<tr>
+									<td>pink diamonds <a href="#"><img alt="more info" title="More info" src="./img/layout/fugue-icons/magnifier_medium_left.png" width="16" height="16" /></a></td>
+									<td class="center">326</td>
+									<td class="center">1.20</td>
+									<td class="center">#15</td>
+								</tr>
+								<tr>
+									<td>geert de deckere <a href="#"><img alt="more info" title="More info" src="./img/layout/fugue-icons/magnifier_medium_left.png" width="16" height="16" /></a></td>
+									<td class="center">302</td>
+									<td class="center">2.80</td>
+									<td class="center">#12</td>
+								</tr>
+								<tr>
+									<td>idoe studios <a href="#"><img alt="more info" title="More info" src="./img/layout/fugue-icons/magnifier_medium_left.png" width="16" height="16" /></a></td>
+									<td class="center">257</td>
+									<td class="center">0.95</td>
+									<td class="center">#89</td>
+								</tr>
+								<tr>
+									<td>admin template <a href="#"><img alt="more info" title="More info" src="./img/layout/fugue-icons/magnifier_medium_left.png" width="16" height="16" /></a></td>
+									<td class="center">93</td>
+									<td class="center">4.25</td>
+									<td class="center">#9</td>
+								</tr>
+								<tr>
+									<td>css grid <a href="#"><img alt="more info" title="More info" src="./img/layout/fugue-icons/magnifier_medium_left.png" width="16" height="16" /></a></td>
+									<td class="center">21</td>
+									<td class="center">2.50</td>
+									<td class="center">#31</td>
+								</tr>
+							</tbody>
+						</table>
+					</div><!-- #table-search -->
+				</div><!-- .tabs -->
+			</div>
+		</div><!-- #content-welcome -->
+
+		<div id="content-forms">
+			<div class="span-4 first">
+				<form class="span-4 first" method="post" action="#">
+					<p>
+						<label class="span-1 first" for="textfield1">Text field (span-1):</label>
+						<span class="span-3">
+							<input id="textfield1" class="span-1 first" type="text" />
+							<small><span class="ie-hide">▴ </span>Short explanation about the field above</small>
+						</span>
+					</p>
+
+					<p>
+						<label class="span-1 first" for="textfield2">Text field (span-2):</label>
+						<span class="span-3">
+							<input id="textfield2" class="span-2 first" type="text" />
+						</span>
+					</p>
+
+					<p class="alert">
+						<label class="span-1 first" for="textfield4">Text field (with error):</label>
+						<span class="span-3">
+							<input id="textfield4" class="span-2 first" type="text" />
+							<small><span class="ie-hide">▴ </span>You entered invalid information</small>
+						</span>
+					</p>
+
+					<p>
+						<label class="span-1 first" for="textfield3">Text field (span-3):</label>
+						<span class="span-3">
+							<input id="textfield3" class="span-3 first" type="text" />
+						</span>
+					</p>
+
+					<p>
+						<label class="span-1 first" for="textarea1">Textarea:</label>
+						<span class="span-3">
+							<button class="small">B</button>
+							<button class="small">I</button>
+							<button class="small">U</button>
+							<button class="small">Some</button>
+							<button class="small">Small</button>
+							<button class="small">Buttons</button>
+							<textarea id="textarea1" class="span-3 first" rows="10" cols="40"></textarea>
+							<small><span class="ie-hide">▴ </span>This is a textarea that spans three columns</small>
+						</span>
+					</p>
+
+					<p>
+						<label class="span-1 first" for="upload1">File upload:</label>
+						<span class="span-3">
+							<input id="upload1" type="file" />
+						</span>
+					</p>
+
+					<p>
+						<label class="span-1 first" for="select1">Select list:</label>
+						<span class="span-3">
+							<select id="select1">
+								<option disabled="disabled">— Choose from the list —</option>
+								<option value="1">Option #1</option>
+								<option value="2">Option #2</option>
+								<option value="3">Option #3</option>
+								<option value="4">Option #4</option>
+							</select>
+						</span>
+					</p>
+
+					<p>
+						<span class="span-1 first">Radio buttons:</span>
+						<span class="span-3">
+							<input id="radio1" name="radio" type="radio" /><label for="radio1">Radio #1</label>
+							<input id="radio2" name="radio" type="radio" /><label for="radio2">Radio #2</label>
+							<input id="radio3" name="radio" type="radio" /><label for="radio3">Radio #3</label>
+							<input id="radio4" name="radio" type="radio" /><label for="radio4">Radio #4</label>
+						</span>
+					</p>
+
+					<p>
+						<span class="span-1 first">Checkboxes:</span>
+						<span class="span-1">
+							<input id="checkbox1" type="checkbox" /><label for="checkbox1">Checkbox #1</label><br />
+							<input id="checkbox2" type="checkbox" /><label for="checkbox2">Checkbox #2</label><br />
+							<input id="checkbox3" type="checkbox" /><label for="checkbox3">Checkbox #3</label><br />
+						</span>
+						<span class="span-1">
+							<input id="checkbox4" type="checkbox" /><label for="checkbox4">Checkbox #4</label><br />
+							<input id="checkbox5" type="checkbox" /><label for="checkbox5">Checkbox #5</label><br />
+							<input id="checkbox6" type="checkbox" /><label for="checkbox6">Checkbox #6</label><br />
+						</span>
+						<span class="span-1">
+							<input id="checkbox7" type="checkbox" /><label for="checkbox7">Checkbox #7</label><br />
+							<input id="checkbox8" type="checkbox" /><label for="checkbox8">Checkbox #8</label><br />
+							<input id="checkbox9" type="checkbox" /><label for="checkbox9">Checkbox #9</label><br />
+						</span>
+					</p>
+
+					<p class="span-3 first prefix-1">
+						<button type="submit">Submit button</button>
+						or <a class="quiet" href="#">cancel</a>
+					</p>
+				</form>
+			</div>
+			<div class="span-1 prefix-1">
+				<p>You can also lay out forms using the very same CSS grid system.</p>
+			</div>
+		</div><!-- #content-forms -->
+
+		<div id="content-tables">
+			<div class="span-2 first">
+				<table summary="Search words used to find the site">
+					<thead>
+						<tr>
+							<th>Keyword</th>
+							<th class="center" style="width:20%">Visits</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>themeforest <a href="#"><img alt="more info" title="More info" src="./img/layout/fugue-icons/magnifier_medium_left.png" width="16" height="16" /></a></td>
+							<td class="center">596</td>
+						</tr>
+						<tr>
+							<td>valid html template <a href="#"><img alt="more info" title="More info" src="./img/layout/fugue-icons/magnifier_medium_left.png" width="16" height="16" /></a></td>
+							<td class="center">588</td>
+						</tr>
+						<tr>
+							<td>pink diamonds <a href="#"><img alt="more info" title="More info" src="./img/layout/fugue-icons/magnifier_medium_left.png" width="16" height="16" /></a></td>
+							<td class="center">326</td>
+						</tr>
+						<tr>
+							<td>geert de deckere <a href="#"><img alt="more info" title="More info" src="./img/layout/fugue-icons/magnifier_medium_left.png" width="16" height="16" /></a></td>
+							<td class="center">302</td>
+						</tr>
+						<tr>
+							<td>idoe studios <a href="#"><img alt="more info" title="More info" src="./img/layout/fugue-icons/magnifier_medium_left.png" width="16" height="16" /></a></td>
+							<td class="center">257</td>
+						</tr>
+						<tr>
+							<td>admin template <a href="#"><img alt="more info" title="More info" src="./img/layout/fugue-icons/magnifier_medium_left.png" width="16" height="16" /></a></td>
+							<td class="center">93</td>
+						</tr>
+						<tr>
+							<td>css grid <a href="#"><img alt="more info" title="More info" src="./img/layout/fugue-icons/magnifier_medium_left.png" width="16" height="16" /></a></td>
+							<td class="center">21</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="span-1 prefix-3">
+				<p>
+					Tables automatically squeeze into the grid as you can see.
+					Row striping is handled by two lines of jQuery.
+				</p>
+			</div>
+			<div class="span-4 first">
+				<table summary="Visitor statistics for the past week">
+					<thead>
+						<tr>
+							<th>Date</th>
+							<th class="center" style="width:18%">Visits</th>
+							<th class="center" style="width:18%">Unique</th>
+							<th class="center" style="width:18%">Pageviews</th>
+							<th class="center" style="width:18%">New Visits</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><a href="#">January 22nd, 2009</a></td>
+							<td class="center">684</td>
+							<td class="center">596</td>
+							<td class="center">3215</td>
+							<td class="center">72.6%</td>
+						</tr>
+						<tr>
+							<td><a href="#">January 21st, 2009</a></td>
+							<td class="center">854</td>
+							<td class="center">756</td>
+							<td class="center">4587</td>
+							<td class="center">75.9%</td>
+						</tr>
+						<tr>
+							<td><a href="#">January 20th, 2009</a></td>
+							<td class="center">1047</td>
+							<td class="center">894</td>
+							<td class="center">6845</td>
+							<td class="center">82.0%</td>
+						</tr>
+						<tr>
+							<td><a href="#">January 19th, 2009</a></td>
+							<td class="center">1685</td>
+							<td class="center">1402</td>
+							<td class="center">7112</td>
+							<td class="center">80.1%</td>
+						</tr>
+						<tr>
+							<td><a href="#">January 18th, 2009</a></td>
+							<td class="center">658</td>
+							<td class="center">459</td>
+							<td class="center">2698</td>
+							<td class="center">68.5%</td>
+						</tr>
+						<tr>
+							<td><a href="#">January 17th, 2009</a></td>
+							<td class="center">784</td>
+							<td class="center">590</td>
+							<td class="center">3654</td>
+							<td class="center">72.3%</td>
+						</tr>
+						<tr>
+							<td><a href="#">January 16th, 2009</a></td>
+							<td class="center">1203</td>
+							<td class="center">1015</td>
+							<td class="center">4506</td>
+							<td class="center">85.7%</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="span-6 first">
+				<table summary="Latest comments">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th style="width:40%">Excerpt</th>
+							<th>Date</th>
+							<th class="center">Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>John Doe</td>
+							<td>Great article! I would like to add that dolor ipsum sit amet dolore…</td>
+							<td>12 minutes ago</td>
+							<td class="center">
+								<a href="#"><img alt="view" title="View" src="./img/layout/fugue-icons/balloon__arrow.png" width="16" height="16" /></a>
+								<a href="#"><img alt="approve" title="Approve" src="./img/layout/fugue-icons/tick_circle.png" width="16" height="16" /></a>
+								<a href="#"><img alt="delete" title="Delete" src="./img/layout/fugue-icons/slash.png" width="16" height="16" /></a>
+							</td>
+						</tr>
+						<tr>
+							<td>J. The Plumber</td>
+							<td>Lorem dolor ipsum sit amet, constetur eiusmod tempor incididunt ut labo…</td>
+							<td>4 hours ago</td>
+							<td class="center">
+								<a href="#"><img alt="view" title="View" src="./img/layout/fugue-icons/balloon__arrow.png" width="16" height="16" /></a>
+								<a href="#"><img alt="approve" title="Approve" src="./img/layout/fugue-icons/tick_circle.png" width="16" height="16" /></a>
+								<a href="#"><img alt="delete" title="Delete" src="./img/layout/fugue-icons/slash.png" width="16" height="16" /></a>
+							</td>
+						</tr>
+						<tr>
+							<td>Joe Bloggs</td>
+							<td>Hey, nice to see you're checking out consectetur adipisicing elit…</td>
+							<td>10 hours ago</td>
+							<td class="center">
+								<a href="#"><img alt="view" title="View" src="./img/layout/fugue-icons/balloon__arrow.png" width="16" height="16" /></a>
+								<a href="#"><img alt="approve" title="Approve" src="./img/layout/fugue-icons/tick_circle.png" width="16" height="16" /></a>
+								<a href="#"><img alt="delete" title="Delete" src="./img/layout/fugue-icons/slash.png" width="16" height="16" /></a>
+							</td>
+						</tr>
+						<tr>
+							<td>SwissWatches</td>
+							<td>Pricey Watches 80% OFF PRICE: mRolex, Panerai, Louis Vuiton,…</td>
+							<td>3 days ago</td>
+							<td class="center">
+								<a href="#"><img alt="view" title="View" src="./img/layout/fugue-icons/balloon__arrow.png" width="16" height="16" /></a>
+								<a href="#"><img alt="approve" title="Approve" src="./img/layout/fugue-icons/tick_circle.png" width="16" height="16" /></a>
+								<a href="#"><img alt="delete" title="Delete" src="./img/layout/fugue-icons/slash.png" width="16" height="16" /></a>
+							</td>
+						</tr>
+						<tr>
+							<td>Jon Jones</td>
+							<td>Certain fixed expressions are used as quis nostrud exercitation ullamco…</td>
+							<td>1 week ago</td>
+							<td class="center">
+								<a href="#"><img alt="view" title="View" src="./img/layout/fugue-icons/balloon__arrow.png" width="16" height="16" /></a>
+								<a href="#"><img alt="approve" title="Approve" src="./img/layout/fugue-icons/tick_circle.png" width="16" height="16" /></a>
+								<a href="#"><img alt="delete" title="Delete" src="./img/layout/fugue-icons/slash.png" width="16" height="16" /></a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div><!-- #content-tables -->
+
+		<div id="content-pagination">
+			<div class="span-5 first">
+				<ul class="pagination">
+					<li><a href="#p1">1</a></li>
+					<li><a href="#p2">2</a></li>
+					<li><strong>3</strong></li>
+					<li><a href="#p4">4</a></li>
+					<li><a href="#p5">5</a></li>
+				</ul>
+				<ul class="pagination clear">
+					<li><a href="#p15">« Previous</a></li>
+					<li><strong>Page 16 of 99</strong></li>
+					<li><a href="#p17">Next »</a></li>
+				</ul>
+				<ul class="pagination clear">
+					<li><a href="#p1">First</a></li>
+					<li><span>…</span></li>
+					<li><a href="#p13">13</a></li>
+					<li><a href="#p14">14</a></li>
+					<li><a href="#p15">15</a></li>
+					<li><strong>16</strong></li>
+					<li><a href="#p17">17</a></li>
+					<li><a href="#p18">18</a></li>
+					<li><a href="#p19">19</a></li>
+					<li><span>…</span></li>
+					<li><a href="#p99">Last</a></li>
+				</ul>
+				<ul class="pagination clear">
+					<li><a href="#p1">1</a></li>
+					<li><a href="#p2">2</a></li>
+					<li><a href="#p2">3</a></li>
+					<li><span>…</span></li>
+					<li><a href="#p12">12</a></li>
+					<li><a href="#p13">13</a></li>
+					<li><a href="#p14">14</a></li>
+					<li><a href="#p15">15</a></li>
+					<li><strong>16</strong></li>
+					<li><a href="#p17">17</a></li>
+					<li><a href="#p18">18</a></li>
+					<li><a href="#p19">19</a></li>
+					<li><a href="#p20">20</a></li>
+					<li><span>…</span></li>
+					<li><a href="#p121">121</a></li>
+					<li><a href="#p122">122</a></li>
+					<li><a href="#p123">123</a></li>
+				</ul>
+			</div>
+			<div class="span-1">
+				Pagination can be set up in many different ways using the same HTML structure.
+			</div>
+		</div><!-- #content-pagination -->
+
+		<div id="content-messages">
+			<div class="span-6 first success message">
+				<p><strong>Success</strong> · The new data has been saved. Yay!</p>
+			</div>
+			<div class="span-5 first warning message">
+				<p><strong>Warning</strong> · It is hard to look past these boxes, isn't it?</p>
+			</div>
+			<div class="span-4 first success message">
+				<p>Let's see how small the box can get.</p>
+			</div>
+			<div class="span-3 first success message">
+				<p>Small…</p>
+			</div>
+			<div class="span-2 first success message">
+				<p>Smaller…</p>
+			</div>
+			<div class="span-1 first warning message">
+				<p>Smallest!</p>
+			</div>
+			<div class="span-4 first prefix-1">
+				<div class="message">
+					<p>A box without an icon. It is all very flexible. The variations are endless.</p>
+				</div>
+			</div>
+		</div><!-- #content-messages -->
+
+		<div id="content-boxes">
+			<div class="span-2 first">
+				<div class="tabs">
+					<div class="head">
+						<ul>
+							<li><a href="#tabbox1">Box</a></li>
+							<li><a href="#tabbox2">With</a></li>
+							<li><a href="#tabbox3">Tabs</a></li>
+						</ul>
+					</div>
+					<div id="tabbox1" class="body">
+						<p><strong>First tab.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+					<div id="tabbox2" class="body">
+						<p><strong>Second tab.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+					<div id="tabbox3" class="body">
+						<p><strong>Third tab.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+				</div><!-- .tabs -->
+			</div>
+			<div class="span-2">
+				<p class="light box">
+					<strong>Text in a light box.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</p>
+			</div>
+			<div class="span-2">
+				<p class="dark box">
+					<strong>Text in a darker box.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</p>
+			</div>
+		</div><!-- #content-boxes -->
+
+		<div id="content-text">
+			<div class="span-3 first">
+				<h1>Heading h1</h1>
+				<h2>Heading h2</h2>
+				<p>Lorem ipsum <a href="#">link</a> dolor sit amet, <strong>strong text</strong> consectetur adipisicing elit, <em>em text</em> tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.</p>
+				<blockquote><p>Blockquote. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p></blockquote>
+				<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+			</div>
+			<div class="span-2 prefix-1">
+				<ul>
+					<li>Unordered list</li>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Consectetur adipisicing elit</li>
+				</ul>
+				<ol>
+					<li>Ordered list</li>
+					<li>Lorem ipsum dolor <a href="#">link</a> amet</li>
+					<li>Consectetur adipisicing elit</li>
+				</ol>
+			</div>
+		</div><!-- #content-text -->
+	</div><!-- #content -->
+
+	<div id="footer" class="clearfix">
+		<p class="left">
+			Template by <a href="http://www.idoe.be/">Geert De Deckere</a> · Some icons by <a href="http://www.pinvoke.com/">Yusuke Kamiyamane</a><br />
+			Copyright ©2009 · For sale at <a href="http://themeforest.net/user/GeertDD/portfolio?ref=GeertDD">ThemeForest</a>
+		</p>
+		<p class="right">
+			<a href="#">Return to the website</a>
+		</p>
+	</div><!-- #footer -->
+
+</body>
+</html>
